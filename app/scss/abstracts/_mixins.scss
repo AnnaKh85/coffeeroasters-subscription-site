@@ -1,0 +1,39 @@
+/*
+1em = 16px
+$breakpoint argument choises
+- tablet - 768px - 48em
+- mobile - 380px - 23.75em
+*/
+@mixin flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin button() {
+    color: $color-light-cream;
+    background-color: $color-dark-cyan;
+    padding: 1.5rem 3.1rem;
+    width: 21.7rem;
+    height: 5.6rem;
+    border-radius: 6px;
+    font-family: $font-fraunces;
+    font-size: $font-lg;
+    font-weight: 900;
+    line-height: 25px; /* 138.889% */
+    text-align: center;
+    cursor: pointer;
+}
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == mobile {
+    @media (max-width: 375px) {
+      @content;
+    }
+  }
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content;
+    }
+  }
+}

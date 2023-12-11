@@ -1,0 +1,10 @@
+// font
+$font-fraunces: 'Fraunces', serif;
+$font-barlow: 'Fraunces', serif;
+
+@mixin paragrath () {
+    font-size: $font-md;
+    font-family: $font-barlow;
+    font-weight: 400;
+    line-height: 26px;
+}

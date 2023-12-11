@@ -1,0 +1,46 @@
+footer {
+  .container {
+    width: 100%;
+    background-color: $color-dark-blue;
+    height: 12rem;
+    margin-bottom: 8.8rem;
+    margin-top: 20rem;
+    @include flex-center();
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 8.5rem;
+    padding-right: 8.5rem;
+
+    .menu__menu-items {
+      @include flex-center();
+      justify-content: space-between;
+      gap: 3.3rem;
+
+      a {
+        text-decoration-line: none;
+        color: $color-grey;
+      }
+
+      .menu-item {
+        @include flex-center();
+        gap: 3.3rem;
+        font-size: $font-sm;
+        font-weight: 700;
+        text-transform: uppercase;
+        line-height: 15px;
+        letter-spacing: 0.923px;
+      }
+    }
+
+    .socials {
+        @include flex-center();
+        gap: 2rem;
+
+        svg {
+            fill: $color-light-cream;
+            height: 2.4rem;
+            width: 2.4rem;
+        }
+    }
+  }
+}

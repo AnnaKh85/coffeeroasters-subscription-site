@@ -1,0 +1,102 @@
+.how-it-works {
+  max-width: 100%;
+  margin-top: 15rem;
+
+  display: flex;
+  flex-direction: column;
+
+  > h2 {
+    font-family: $font-fraunces;
+    font-size: $font-xl;
+    color: $color-grey;
+    font-weight: 900;
+    line-height: 32px; /* 133.333% */
+  }
+
+  .line {
+    margin-top: 8rem;
+    width: 76rem;
+    height: 2px;
+    background-color: $color-pale-orange;
+    position: relative;
+    z-index: 10;
+
+    &__circle-1 {
+      position: absolute;
+      top: -15.5px;
+      left: 0;
+      width: 3.1rem;
+      height: 3.1rem;
+      border: 1px solid $color-dark-cyan;
+      border-radius: 100px;
+      z-index: 20;
+      background-color: $color-light-cream;
+    }
+    &__circle-2 {
+      position: absolute;
+      top: -15.5px;
+      left: 50%;
+      width: 3.1rem;
+      height: 3.1rem;
+      border: 1px solid $color-dark-cyan;
+      border-radius: 100px;
+      z-index: 20;
+      background-color: $color-light-cream;
+    }
+    &__circle-3 {
+      position: absolute;
+      top: -15.5px;
+      left: 100%;
+      width: 3.1rem;
+      height: 3.1rem;
+      border: 1px solid $color-dark-cyan;
+      border-radius: 100px;
+      z-index: 20;
+      background-color: $color-light-cream;
+    }
+  }
+
+  .content-blocks {
+    display: flex;
+    gap: 9.5rem;
+
+    .block {
+      width: 28.5rem;
+      text-align: left;
+
+      .number {
+        margin: 0;
+        padding: 0;
+        margin-top: 6.7rem;
+        font-family: $font-fraunces;
+        font-size: $font-4xl;
+        color: $color-pale-orange;
+        font-weight: 900;
+        line-height: 72px; /* 100% */
+      }
+
+      .header {
+        margin-top: 4.5rem;
+        margin-bottom: 4.5rem;
+        font-family: $font-fraunces;
+        font-size: $font-3xl;
+        font-weight: 900;
+        line-height: 36px; /* 112.5% */
+        color: $color-dark-grey-blue;
+      }
+
+      .description {
+        font-family: $font-barlow;
+        font-size: $font-md;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+        color: $color-dark-grey-blue;
+      }
+    }
+  }
+
+  .button {
+    margin-top: 6rem;
+    @include button();
+  }
+}

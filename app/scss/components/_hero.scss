@@ -1,0 +1,52 @@
+.hero {
+  width: 100%;
+  height: 67rem;
+  background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+  background-size: cover; /* try other properties here like cover, contain, etc */
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  border-radius: 10px;
+  margin-top: 4rem;
+
+  padding-left: 9rem;
+  padding-top: 13.5rem;
+
+  color: $color-light-cream;
+
+  > h1 {
+    font-size: $font-4xl;
+    margin: 0;
+    font-weight: 900;
+    font-family: $font-fraunces;
+    line-height: 72px;
+    margin-bottom: 5.5rem;
+  }
+
+  > p {
+    margin: 0;
+    font-size: $font-md;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+    font-family: $font-barlow;
+    width: 44.5rem;
+    margin-bottom: 7rem;
+  }
+
+  .create-plan{
+    background-color: $color-dark-cyan;
+    width: 25rem;
+    height: 6rem;
+    padding: 15px 40px;
+    border-radius: 6px;
+  }
+
+  .button{
+    color: $color-light-cream;
+    font-family: $font-fraunces;
+    font-size: $font-lg;
+    font-weight: 900;
+    line-height: 25px; /* 138.889% */
+    text-align: center;
+    cursor: pointer;
+  }
+}
