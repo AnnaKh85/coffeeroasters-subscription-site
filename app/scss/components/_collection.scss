@@ -1,13 +1,20 @@
 .collection {
   margin-top: 21rem;
 
+  @include respond(tablet) {
+    margin-top: 14.4rem;
+  }
+  @include respond(mobile) {
+    margin-top: 12rem;
+  }
+
   &__title {
     text-align: center;
     font-family: $font-fraunces;
     font-size: 150px;
     font-style: normal;
     font-weight: 900;
-    line-height: 72px; /* 48% */
+    line-height: 72px;
     color: $color-grey;
     background: linear-gradient(
       to bottom,
@@ -17,6 +24,13 @@
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+
+    @include respond(tablet) {
+      font-size: 96px;
+    }
+    @include respond(mobile) {
+      font-size: 40px;
+    }
   }
 
   &__items {
@@ -25,28 +39,55 @@
     margin: 0 auto;
     gap: 3.5rem;
 
+    @include respond(tablet) {
+      flex-direction: column;
+      gap: 3.2rem;
+    }
+
     .item {
       width: 25.5rem;
       text-align: center;
       color: $color-dark-grey-blue;
+      @include flex-center();
+      flex-direction: column;
+      margin: 0 auto;
+
+      @include respond(tablet) {
+        flex-direction: row;
+        margin: 0 auto;
+        width: 57.3rem;
+      }
+
+      @include respond(mobile) {
+        flex-direction: column;
+        margin: 0 auto;
+        width: 28.2rem;
+      }
 
       > img {
         width: 25.5rem;
         margin-bottom: 7.1rem;
+
+        @include respond(tablet) {
+          margin-bottom: 0;
+        }
       }
 
-      > h2 {
-        font-size: $font-xl;
-        font-family: $font-fraunces;
-        font-weight: 900;
-        line-height: 32px; /* 133.333% */
-      }
+      .text {
+        max-width: 28.2rem;
+        > h2 {
+          font-size: $font-xl;
+          font-family: $font-fraunces;
+          font-weight: 900;
+          line-height: 32px; /* 133.333% */
+        }
 
-      > p {
-        font-family: $font-barlow;
-        font-size: $font-md;
-        font-weight: 400;
-        line-height: 26px; /* 162.5% */
+        > p {
+          font-family: $font-barlow;
+          font-size: $font-md;
+          font-weight: 400;
+          line-height: 26px; /* 162.5% */
+        }
       }
     }
   }

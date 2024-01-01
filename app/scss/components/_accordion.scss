@@ -1,0 +1,32 @@
+.accordion {
+
+    &__question {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+
+    .accordion__question::after {
+        transition: transform 300ms ease-in-out;
+    }
+
+    &__question::after {
+        content: "";
+        display: inline-block;
+        width: 1.6rem;
+        height: 1.6rem;
+        background-image: url("../../../assets/plan/desktop/icon-arrow.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center center;
+    }
+
+    .accordion__question.active::after {
+        transform: rotate(180deg);
+    }
+
+    .accordion-content.collapsed {
+        display: none;
+    }
+}

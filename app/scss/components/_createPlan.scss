@@ -1,0 +1,158 @@
+.create-plan {
+  margin: 15rem 16.5rem;
+  display: flex;
+  gap: 10rem;
+
+  .side-menu-items {
+    margin: 0 auto;
+    max-width: 25.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.45rem;
+
+    .menu-item {
+      display: flex;
+      gap: 24.5px;
+      font-size: $font-xl;
+      font-family: $font-fraunces;
+      font-weight: 900;
+      line-height: 32px; /* 133.333% */
+      color: $color-grey;
+      cursor: pointer;
+    }
+
+    .line {
+      width: 25.5rem;
+      height: 1px;
+      background-color: $color-button-default;
+    }
+
+    .menu-item.active {
+      .num {
+        color: $color-button-default;
+      }
+
+      .menu-item-name {
+        color: $color-dark-grey-blue;
+      }
+    }
+  }
+
+  .options {
+    max-width: 73rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+
+    .option {
+      > h1 {
+        margin: 0;
+        font-family: $font-fraunces;
+        color: $color-grey;
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 48px; /* 120% */
+      }
+
+      &__items {
+        display: flex;
+        margin: 5.6rem auto;
+        gap: 2.3rem;
+
+        .item {
+          display: flex;
+          flex-direction: column;
+          margin: 0 auto;
+          width: 22.8rem;
+          height: 25rem;
+
+          background-color: $selection-option-default;
+          border-radius: 8px;
+          padding: 3.2rem 2.8rem;
+
+          cursor: pointer;
+
+          transition: all 0.3s;
+
+          > h2 {
+            font-family: $font-fraunces;
+            font-size: $font-xl;
+            color: $color-dark-grey-blue;
+            font-weight: 900;
+            line-height: 32px; /* 133.333% */
+          }
+
+          .text {
+            font-family: $font-barlow;
+            font-size: $font-md;
+            color: $color-dark-grey-blue;
+            font-weight: 400;
+            line-height: 26px; /* 162.5% */
+          }
+        }
+
+        .item.selected {
+          background-color: $color-dark-cyan;
+
+          > h2 {
+            color: white;
+          }
+
+          .text {
+            color: $color-light-cream;
+          }
+        }
+
+        .item:not(.selected):hover {
+          background-color: $color-pale-orange;
+        }
+      }
+    }
+
+    .order-summary {
+      width: 100%;
+      background-color: $color-dark-grey-blue;
+      padding: 3.1rem 6.4rem;
+
+      > h3 {
+        margin: 0;
+        font-family: $font-barlow;
+        opacity: 0.5037;
+        font-size: $font-md;
+        color: white;
+        font-weight: 400;
+        line-height: 26px; /* 162.5% */
+        text-transform: uppercase;
+        margin-bottom: 8px;
+      }
+
+      .summary {
+        font-family: $font-fraunces;
+        color: white;
+        font-size: $font-xl;
+        font-weight: 900;
+        line-height: 40px; /* 166.667% */
+
+        > span {
+            color: $color-dark-cyan;
+        }
+      }
+    }
+
+    .button-right {
+    margin-top: 6rem;
+    align-self: end;
+    @include button();
+    transition: all 0.3s;
+
+    @include respond(mobile) {
+      justify-self: center;
+      margin: 9rem auto;
+    }
+  }
+
+  .button:hover {
+    background-color: $color-button-hover;
+  }
+  }
+}

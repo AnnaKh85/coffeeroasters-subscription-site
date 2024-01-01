@@ -5,21 +5,40 @@
   display: flex;
   flex-direction: column;
 
+  @include respond(tablet) {
+    margin-top: 40rem;
+  }
+  @include respond(mobile) {
+    margin-top: 80rem;
+  }
+
   > h2 {
     font-family: $font-fraunces;
     font-size: $font-xl;
     color: $color-grey;
     font-weight: 900;
     line-height: 32px; /* 133.333% */
+
+    @include respond(mobile) {
+      text-align: center;
+    }
   }
 
   .line {
     margin-top: 8rem;
-    width: 76rem;
+    max-width: 76rem;
     height: 2px;
     background-color: $color-pale-orange;
     position: relative;
     z-index: 10;
+
+    @include respond(tablet) {
+      max-width: 46.7rem;
+    }
+
+    @include respond(mobile) {
+      display: none;
+    }
 
     &__circle-1 {
       position: absolute;
@@ -60,9 +79,25 @@
     display: flex;
     gap: 9.5rem;
 
+    @include respond(tablet) {
+      gap: 1rem;
+    }
+
+    @include respond(mobile) {
+      flex-direction: column;
+    }
+
     .block {
-      width: 28.5rem;
+      max-width: 28.5rem;
       text-align: left;
+
+      @include respond(tablet) {
+        width: 100%;
+      }
+      @include respond(mobile) {
+        text-align: center;
+        max-width: 32.7rem;
+      }
 
       .number {
         margin: 0;
@@ -73,6 +108,10 @@
         color: $color-pale-orange;
         font-weight: 900;
         line-height: 72px; /* 100% */
+
+        @include respond(tablet) {
+          line-height: 72px; /* 100% */
+        }
       }
 
       .header {
@@ -83,6 +122,10 @@
         font-weight: 900;
         line-height: 36px; /* 112.5% */
         color: $color-dark-grey-blue;
+
+        @include respond(tablet) {
+          line-height: 32px; /* 114.286% */
+        }
       }
 
       .description {
@@ -98,5 +141,43 @@
   .button {
     margin-top: 6rem;
     @include button();
+    transition: all 0.3s;
+
+    @include respond(mobile) {
+      justify-self: center;
+      margin: 9rem auto;
+    }
+  }
+  
+  .link {
+    text-decoration: none;
+    margin-left: 0;
+  }
+
+  .button:hover {
+    background-color: $color-button-hover;
+  }
+}
+
+.how-it-works.dark-mode {
+  background-color: $color-dark-blue;
+  padding-left: 8.5rem;
+  padding-bottom: 10rem;
+
+  .line {
+    &__circle-1,
+    &__circle-2,
+    &__circle-3 {
+      background-color: $color-dark-blue;
+    }
+  }
+  .content-blocks {
+    .header {
+      color: $color-light-cream;
+    }
+
+    .description {
+      color: $color-light-cream;
+    }
   }
 }

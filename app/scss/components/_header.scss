@@ -9,6 +9,7 @@ header {
     a {
        text-decoration-line: none; 
        color: $color-grey;
+       transition: all 0.3s;
     }
 
     &__menu-items {
@@ -19,6 +20,11 @@ header {
       text-transform: uppercase;
       line-height: 15px;
       letter-spacing: 0.923px;
+      transition: all 0.3s;
+    }
+
+    .menu-item:hover {
+      color: $color-dark-grey-blue;
     }
   }
 }

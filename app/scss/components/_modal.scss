@@ -1,0 +1,87 @@
+.modal.hide {
+  display: none;
+}
+
+.modal {
+  position: fixed;
+  top: calc(50% - (54rem / 2));
+  left: calc(50% - (60rem / 2));
+  width: 54rem;
+  height: 60rem;
+  background-color: rgba($color-light-cream, 0.95);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  // justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+
+  .head {
+    border-radius: 8px;
+    width: 100%;
+    height: 13.6rem;
+    background-color: $color-dark-grey-blue;
+    text-align: center;
+    padding-top: 4rem;
+
+    font-family: $font-fraunces;
+    color: white;
+    font-weight: 900;
+    line-height: 48px; /* 120% */
+    font-size: $font-2xl;
+  }
+
+  .summary_text {
+    font-family: $font-fraunces;
+    color: $color-dark-grey-blue;
+    font-size: $font-xl;
+    font-weight: 900;
+    line-height: 40px; /* 166.667% */
+    text-align: center;
+    margin: 5rem 5.6rem;
+  }
+
+  .agreement_text {
+    color: $color-dark-grey-blue;
+    opacity: 0.8;
+    font-size: $font-md;
+    margin-left: 5.6rem;
+    margin-right: 5.6rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 26px; /* 162.5% */
+  }
+
+  .checkout {
+    display: flex;
+    padding: 5rem 5.6rem;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    .checkout__price {
+      font-family: $font-fraunces;
+      color: $color-dark-grey-blue;
+      font-size: $font-3xl;
+      font-weight: 900;
+      line-height: 40px; /* 166.667% */
+      text-align: center;
+      margin: 0;
+    }
+    .checkout__button {
+      width: 21.7rem;
+      height: 5.6rem;
+      background-color: $color-dark-cyan;
+      font-family: $font-fraunces;
+      color: white;
+      border-radius: 6px;
+      padding-top: 14px;
+      font-size: $font-lg;
+      font-weight: 900;
+      line-height: 25px; /* 138.889% */
+      text-align: center;
+      margin: 0;
+      cursor: pointer;
+    }
+  }
+}

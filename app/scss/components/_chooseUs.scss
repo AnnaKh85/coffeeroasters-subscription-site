@@ -8,6 +8,11 @@
   padding: 0;
   position: relative;
 
+  @include respond(mobile) {
+    height: 90rem;
+    margin-top: 12rem;
+  }
+
   &__title {
     padding-top: 10rem;
     background-color: $color-dark-grey-blue;
@@ -16,12 +21,28 @@
     text-align: center;
     border-radius: 10px;
 
+    @include respond(tablet) {
+      padding-top: 7.1rem;
+    }
+
+    @include respond(mobile) {
+      padding-top: 6.4rem;
+      height: 90rem;
+    }
+
     > h2 {
       font-family: $font-fraunces;
       font-size: $font-2xl;
       color: $color-light-cream;
       font-weight: 900;
       line-height: 48px; /* 120% */
+
+      @include respond(tablet) {
+        font-size: $font-3xl;
+      }
+      @include respond(mobile) {
+        font-size: 2.8rem;
+      }
     }
 
     > p {
@@ -30,6 +51,10 @@
       width: 54rem;
       color: $color-light-cream;
       opacity: 0.8;
+
+      @include respond(mobile) {
+        width: 28rem;
+      }
     }
   }
 
@@ -41,8 +66,18 @@
     position: absolute;
     top: 45rem;
 
+    @include respond(tablet) {
+      flex-direction: column;
+      top: 38rem;
+    }
+
+    @include respond(mobile) {
+      flex-direction: column;
+      top: 40rem;
+    }
+
     .card {
-      width: 35rem;
+      max-width: 35rem;
       height: 38.2rem;
       background-color: $color-dark-cyan;
       border-radius: 8px;
@@ -51,28 +86,76 @@
       margin: 0 auto;
       text-align: center;
 
+      @include respond(tablet) {
+        flex-direction: row;
+        max-width: 57.3rem;
+        height: 18rem;
+        padding-left: 7rem;
+      }
+
+      @include respond(mobile) {
+        flex-direction: column;
+        max-width: 28rem;
+        height: 38.2rem;
+        padding: 0 3.3rem;
+      }
+
       > img {
-        height: 7.1rem;
+        max-width: 7.1rem;
         margin-bottom: 2rem;
         margin-top: 4rem;
+
+        @include respond(mobile) {
+          margin-top: 6rem;
+          margin-bottom: 1rem;
+        }
       }
 
-      > h3 {
-        font-family: $font-fraunces;
-        font-size: $font-xl;
-        margin-top: 2rem;
-        font-weight: 900;
-        line-height: 32px; /* 133.333% */
-        color: $color-light-cream;
-      }
+      .text {
+        @include respond(tablet) {
+          text-align: left;
+          margin-left: 4.8rem;
+        }
+        @include respond(mobile) {
+          text-align: center;
+          margin: auto;
+        }
 
-      > p {
-        @include paragrath();
-        color: $color-light-cream;
-        margin-left: 4.8rem;
-        margin-right: 4.8rem;
+        > h3 {
+          font-family: $font-fraunces;
+          font-size: $font-xl;
+          margin-top: 2rem;
+          font-weight: 900;
+          line-height: 32px; /* 133.333% */
+          color: $color-light-cream;
+
+          @include respond(mobile) {
+            text-align: center;
+            margin: auto;
+            margin-bottom: 2rem;
+            font-size: 2.2rem;
+          }
+        }
+
+        > p {
+          @include paragrath();
+          color: $color-light-cream;
+          text-align: center;
+          margin-left: 4.8rem;
+          margin-right: 4.8rem;
+
+          @include respond(tablet) {
+            text-align: left;
+            margin-left: 0rem;
+            margin-right: 4.8rem;
+          }
+
+          @include respond(mobile) {
+            text-align: center;
+            margin: auto;
+          }
+        }
       }
-      
     }
   }
 }

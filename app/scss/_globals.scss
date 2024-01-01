@@ -23,15 +23,19 @@ html {
 
 body {
   scroll-behavior: smooth;
-  max-width: 144rem;
-  margin: auto;
+  max-width: 128rem;
+  margin: 8rem auto;
   font-size: $font-md;
   background-color: $color-light-cream;
 
   @include respond(tablet) {
     max-width: 76.8rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
   }
   @include respond(mobile) {
-    max-width: 38rem;
+    max-width: 37.5rem;
+    margin-left: 2.4rem;
+    margin-right: 2.4rem;
   }
 }

@@ -1,0 +1,78 @@
+.commitment {
+  max-width: 111rem;
+  margin: 0 auto;
+  @include flex-center();
+  gap: 12.5rem;
+  margin-top: 16.8rem;
+
+  @include respond(tablet) {
+    gap: 7rem;
+    margin-top: 14.4rem;
+  }
+
+  @include respond(mobile) {
+    max-width: 32.7rem;
+    gap: 4.8rem;
+    margin-top: 12rem;
+    flex-direction: column;
+  }
+
+  &__pic {
+    width: 44.5rem;
+    height: 52rem;
+    background-image: url("../../assets/about/desktop/image-commitment.jpg");
+    border-radius: 10px;
+
+    @include respond(tablet) {
+      width: 28.1rem;
+      height: 47rem;
+    }
+
+    @include respond(mobile) {
+      width: 32.7rem;
+      height: 40rem;
+    }
+  }
+
+  &__text {
+    max-width: 54rem;
+
+    @include respond(tablet) {
+      max-width: 33.9rem;
+    }
+
+    @include respond(mobile) {
+      max-width: 32.7rem;
+      text-align: center;
+      margin: 0;
+    }
+
+    > h2 {
+      color: $color-dark-blue;
+      font-family: $font-fraunces;
+      font-size: 4.8rem;
+      font-weight: 900;
+      line-height: 48px; /* 120% */
+
+      @include respond(tablet) {
+        font-size: 32px;
+        font-weight: 900;
+        line-height: 48px; /* 150% */
+      }
+    }
+
+    > p {
+      @include paragrath();
+      color: $color-dark-blue;
+      opacity: 0.8;
+
+      @include respond(tablet) {
+        font-size: 15px;
+        line-height: 25px; /* 166.667% */
+      }
+    }
+  }
+}
+
+@include respond(tablet) {
+}
